@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Ramdan Kareem</title>
+  </head>
+  <body>
+    <button id="playVid" class="saudodo" onclick=""></button>
+    <!-- <video loop id="ramaVid" class="photoRama" src="./ramaVid.mp4.mov"></video> -->
+    <img id="WanesPhoto" class="wanesPhoto" src="./wanes.gif" />
+    <audio id="WanesAudio" class="video" loop>
+      <source src="./wanees.mp3" type="audio/mp3" />
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".saudodo", {
+        strings: ["Ramadan Kareem", "Ramadan Mubarak"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+    </script>
+    <script>
+      document.getElementById("playVid").onclick = function () {
+        document.getElementById("WanesAudio").play();
+        document.getElementById("playVid").style.display = "none";
+        document.getElementById("WanesPhoto").style.display = "block";
+      };
+    </script>
+  </body>
+</html>
